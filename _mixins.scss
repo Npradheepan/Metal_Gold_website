@@ -1,0 +1,14 @@
+// Mixins
+@mixin numbers($nums) {    
+    @for $i from 1 through $nums {
+        .item-#{$i} { left: 20px * $i; }
+    }      
+}
+
+@mixin clearfix() {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
